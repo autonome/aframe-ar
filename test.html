@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hello, World! • A-Frame</title>
+  <meta name="description" content="Hello, World! • A-Frame">
+  <script src="aframe.js"></script>
+  <script src="camera.js"></script>
+  <style>   
+    html, body, div, a-scene {
+      background-color: transparent;
+    }
+    video, img {
+      width: 100%    !important;
+      max-width: 100%    !important;
+      height: auto   !important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1000;
+    }
+    .coords {
+      position: absolute;
+      top: 0.1rem;
+      left: 0.1rem;
+      background-color: silver;
+      opacity: 0.5;
+      color: #fff;
+    }
+    .glow {
+      background: #527fa9;
+      box-shadow: inset 0 0 30px 15px #49628a;
+      transition: 500ms ease-in-out;
+    }
+  </style>   
+</head>
+<body>
+  <a-scene>
+
+    <a-sphere position="0 1.25 -2" radius="1.25" color="#EF2D5E"></a-sphere>
+    <a-box position="-1 0.5 0" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
+    <a-cylinder position="1 0.75 -1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+    <a-plane rotation="-90 0 0" position="0 0 -2" width="4" height="4" color="#7BC8A4"></a-plane>
+
+  </a-scene>
+
+  <!--
+  <canvas id="inputCanvas" width="320" height="240" style="display:none"></canvas>
+  -->
+
+  <video id="inputVideo" autoplay loop></video>
+
+  <div class="coords">
+  </div>
+
+  <script type="text/javascript">
+    /*
+    var videoInput = document.getElementById('inputVideo');
+    var canvasInput = document.getElementById('inputCanvas');
+
+    var htracker = new headtrackr.Tracker();
+    htracker.init(videoInput, canvasInput);
+    htracker.start();
+    */
+
+    var vid = document.querySelector('#inputVideo');
+
+    cameraSource.start({
+      videoElement: vid,
+      callback: function() {
+        console.log('videoooo')
+      }
+    });
+    
+    var startPosition = { latitude: null, longitude: null };
+    var lastPosition = { latitude: null, longitude: null };
+    function onPosition(position) {
+      if (!startPosition.latitude) {
+        startPosition.latitude = position.coords.latitude;
+        startPosition.longitude = position.coords.longitude;
+      }
+      priorPosition = lastPosition;
+      lastPosition.latitude = position.coords.latitude;
+      lastPosition.longitude = position.coords.longitude;
+
+      var coords = document.querySelector('.coords');
+      var msg = lastPosition.latitude + ':' + lastPosition.longitude + '('
+      + (priorPosition.latitude - lastPosition.latitude) + ':'
+      + (priorPosition.longitude - lastPosition.longitude) + ')'
+      coords.innerText = msg;
+      coords.classList.add('glow');
+      coords.ontransitionend = function() {
+        coords.classList.remove('glow');
+        console.log('noglow');
+      };
+    }
+    function onGeoError(ex) {
+      console.log(ex);
+    }
+    var geoOptions = {
+      enableHighAccuracy: true,
+      maximumAge        : 5000
+    };
+
+    navigator.geolocation.watchPosition(onPosition, onGeoError, geoOptions);
+
+    /*
+    document.body.addEventListener('click', function (element) {
+      if(element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if(element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if(element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if(element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+    });
+    */
+  </script>
+
+</body>
+</html>
+
