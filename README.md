@@ -3,25 +3,22 @@
 Experimenting with AR on the mobile Web using [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
 and [A-Frame](https://aframe.io/), the declarative VR library from Mozilla.
 
-## Usage
+**How It Works**
 
-As a user:
+I used the getUserMedia API to get access to the phone's camera stream, and set that stream as the background of the entire page.
+Then I create an A-Frame scene above it, with no background.
+
+**NOTE to iPhone/iPad users**
+
+Apple chose to not implement the getUserMedia API, so this will not work on iOS or Safari.
+Let Apple know that you want a better mobile web on iOS devices by [filing a request with Apple](https://bugreport.apple.com).
+
+## Usage
 
 * Install [Firefox on Android from the Play Store](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en)
 * Open [http://autonome.github.io/aframe-ar](http://autonome.github.io/aframe-a) in Firefox on your phone
 * Click the button to allow your camera to used
 * Move your phone around until you see the rubber ducky
-
-As a developer:
-
-* Fork the repo
-* Publish your copy on Github pages or wherever you want
-
-
-NOTE to iPhone/iPad users:
-
-Apple chose to not implement the getUserMedia API, so this will not work on iOS or Safari.
-Let Apple know that you want a better mobile web on iOS devices by [filing a request with Apple](https://bugreport.apple.com).
 
 
 ## Use-Cases
