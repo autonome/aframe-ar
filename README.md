@@ -7,8 +7,10 @@ and [A-Frame](https://aframe.io/), the declarative VR library from Mozilla.
 
 As a user:
 
-* Install Firefox on Android from the Play Store
-* Open http://autonome.github.io/aframe-ar in Firefox
+* Install [Firefox on Android from the Play Store](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en)
+* Open [http://autonome.github.io/aframe-ar](http://autonome.github.io/aframe-a) in Firefox on your phone
+* Click the button to allow your camera to used
+* Move your phone around until you see the rubber ducky
 
 As a developer:
 
