@@ -1,6 +1,7 @@
 # A-Frame AR
 
-Experimenting with AR on the mobile Web using getUserMedia and A-Frame, the declarative VR library from Mozilla.
+Experimenting with AR on the mobile Web using [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
+and [A-Frame](https://aframe.io/), the declarative VR library from Mozilla.
 
 ## Usage
 
@@ -54,5 +55,8 @@ I might take pull-requests or augment the code based on pull-requests,
 but currently have no plans to turn this into a full-featured AR web solution at this time.
 
 
-## License
+## Other Things
+
+* [JS ARToolkit](https://github.com/artoolkit/jsartoolkit5)
+* [Awe.js](https://github.com/buildar/awe.js)(abandoned)
 
