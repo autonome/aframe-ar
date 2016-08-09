@@ -3,6 +3,8 @@
 Experimenting with AR on the mobile Web using [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
 and [A-Frame](https://aframe.io/), the declarative VR library from Mozilla.
 
+[VIEW DEMO (requires Firefox on Android)](https://autonome.github.io/aframe-ar)
+
 **How It Works**
 
 I used the getUserMedia API to get access to the phone's camera stream, and set that stream as the background of the entire page.
