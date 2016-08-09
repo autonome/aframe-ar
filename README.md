@@ -13,6 +13,8 @@ Then I create an A-Frame scene above it, with no background.
 Apple chose to not implement the getUserMedia API, so this will not work on iOS or Safari.
 Let Apple know that you want a better mobile web on iOS devices by [filing a request with Apple](https://bugreport.apple.com).
 
+![Screenshot](/screenshot.png?raw=true "Screenshot")
+
 ## Usage
 
 * Install [Firefox on Android from the Play Store](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en)
