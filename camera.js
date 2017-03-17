@@ -45,7 +45,7 @@ var cameraSource = (function(global) {
       }, 2000);
       */
 
-    });
+    }, function(err) { console.error(err); });
   }
 
   // the whole deal
