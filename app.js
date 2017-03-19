@@ -6,7 +6,7 @@ function onReady() {
     videoElement: vid,
     constraints: {
       video: true,
-      facingMode: { exact: "environment" }
+      facingMode: "environment"
     },
     callback: function() {
       // do stuff
