@@ -4,6 +4,10 @@ function onReady() {
 
   cameraSource.start({
     videoElement: vid,
+    constraints: {
+      video: true,
+      facingMode: { exact: "environment" }
+    },
     callback: function() {
       // do stuff
     }
