@@ -22,13 +22,14 @@ var cameraSource = (function(global) {
   function showCameraPreview(cb) {
     navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 
-      var vidURL = window.URL.createObjectURL(stream);
-
-      videoElement.src = vidURL;
-      videoElement.play();
+      if (videoElement) {
+        var vidURL = window.URL.createObjectURL(stream);
+        videoElement.src = vidURL;
+        videoElement.play();
+      }
 
       if (cb) {
-        cb();
+        cb(stream);
       }
 
       /*

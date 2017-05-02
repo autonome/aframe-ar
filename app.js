@@ -14,6 +14,6 @@ function onReady() {
       document.querySelector('#aScene').appendChild(new DOMParser().parseFromString(htmlStr, 'text/html').body.firstChild);
     }
   });
-
 }
+
 document.addEventListener('DOMContentLoaded', onReady);
