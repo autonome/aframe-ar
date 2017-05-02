@@ -24,6 +24,11 @@ Let Apple know that you want a better mobile web on iOS devices by [filing a req
 * Click the button to allow your camera to used
 * Move your phone around until you see the rubber ducky
 
+As a developer:
+
+* Fork the repo
+* Publish your copy on Github pages or wherever you want
+
 
 ## Use-Cases
 
