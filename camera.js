@@ -23,8 +23,7 @@ var cameraSource = (function(global) {
     navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
 
       if (videoElement) {
-        var vidURL = window.URL.createObjectURL(stream);
-        videoElement.src = vidURL;
+        videoElement.srcObject = stream;
         videoElement.play();
       }
 

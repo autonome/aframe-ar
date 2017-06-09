@@ -44,7 +44,7 @@ function onCameraStream(stream) {
 
       // vec3all callback
       var cb = function(k, v) {
-        return rescale(decibel, [origDecibel, maxDecibel], [2.5, 4.5]);
+        return rescale(decibel, [origDecibel, maxDecibel], [3, 4.5]);
       };
 
       // Apply changes to position
